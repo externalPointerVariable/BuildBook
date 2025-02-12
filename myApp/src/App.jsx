@@ -1,10 +1,15 @@
+import React from 'react';
+import Footer from '../components/Footer.jsx';
+import Header from '../components/Header.jsx';
+
+
 function App() {
 
   return (
     <>
-     <div className="App">
-      <h1 class="text-3xl font-bold underline text-amber-300"> My react App </h1>
-     </div>
+    <Header/>
+      <main></main>
+    <Footer/>
     </>
   )
 }
