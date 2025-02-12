@@ -3,7 +3,7 @@ function App() {
   return (
     <>
      <div className="App">
-      <h1>My React App</h1>
+      <h1 class="text-3xl font-bold underline text-amber-300"> My react App </h1>
      </div>
     </>
   )
