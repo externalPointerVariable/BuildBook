@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <Header/>
-      <main>
+      <main className='bg-gradient-to-r from-blue-100 to-blue-200 text-center p-4 h-screen'>
         <Home/>
       </main>
     <Footer/>
