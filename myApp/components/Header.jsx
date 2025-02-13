@@ -12,11 +12,12 @@ function Header() {
           </a>
         </div>
         <button
-          className="text-white md:hidden"
+          className="text-white md:hidden focus:outline-none transition-transform transform"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           <svg
-            className="w-6 h-6"
+            className={`w-6 h-6 transition-transform transform ${isOpen ? 'rotate-45' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -31,7 +32,7 @@ function Header() {
           </svg>
         </button>
       </div>
-      <nav className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0 ${isOpen ? 'block' : 'hidden'} md:block`}>
+      <nav className={`transition-all duration-300 ease-in-out overflow-hidden flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 ${isOpen ? 'max-h-screen' : 'max-h-0 md:max-h-screen'}`}>
         <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 font-mono text-lg">
           <li className="text-white hover:text-orange-400 transition duration-200">
             <a href="/">
