@@ -1,6 +1,6 @@
 function Home() {
     return (
-      <div className="flex flex-col items-center justify-center mt-11 h-screen">
+      <div className="flex flex-col items-center justify-center mt-11 h-screen" id="home">
         <h1 className="text-5xl font-bold text-gray-800 mb-4">
           Welcome to <span className="text-orange-400">BuildBook</span>
         </h1>
