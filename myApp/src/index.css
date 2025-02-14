@@ -6,4 +6,5 @@ body::-webkit-scrollbar{
 
 body {
     -ms-overflow-style: none;
+    @apply bg-gradient-to-r from-blue-100 to-blue-200;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 import Home from '../pages/Home.jsx';
+import Project from '../pages/Projects.jsx';
 
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
   return (
     <>
     <Header/>
-      <main className='bg-gradient-to-r from-blue-100 to-blue-200 text-center p-4 h-screen'>
+      <main className='text-center p-4 h-screen'>
         <Home/>
+        <Project/>
       </main>
     <Footer/>
     </>
