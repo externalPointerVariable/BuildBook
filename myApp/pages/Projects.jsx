@@ -9,7 +9,7 @@ function Project() {
         <p className="text-lg text-gray-600 mb-6 text-center">
           Explore a collection of innovative and creative projects.
         </p>
-        <Sidebar />
+        <Sidebar/>
       </div>
     </>
   );
