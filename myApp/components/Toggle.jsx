@@ -7,41 +7,40 @@ const projects = [
   { name: "Project 2", code: "function add(a, b) { return a + b; }", output: "Result: 5" },
 ];
 
-function Toggle() {
-  const [open, setOpen] = useState(true);
+export default function Toggle() {
+  const [activeTab, setActiveTab] = useState("Standard Plan");
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <div className={`bg-gray-800 text-white p-4 transition-all duration-300 ${open ? 'w-64' : 'w-16'}`}>
-        <button onClick={() => setOpen(!open)} className="mb-4 p-2 bg-blue-500 rounded">
-          {open ? "Close" : "Open"}
+    <div className="flex flex-col h-screen bg-gray-100 p-6">
+      <div className="flex border-b-2 border-gray-300">
+        <button 
+          className={`px-6 py-2 font-bold ${activeTab === "Standard Plan" ? "bg-white border-b-4 border-green-500" : "text-gray-500"}`} 
+          onClick={() => setActiveTab("Standard Plan")}>
+          Standard Plan
         </button>
-        {open && (
-          <ul>
-            {projects.map((project) => (
-              <li key={project.name} className="cursor-pointer p-2 hover:bg-gray-700" onClick={() => setSelectedProject(project)}>
-                {project.name}
-              </li>
-            ))}
-          </ul>
-        )}
+        <button 
+          className={`px-6 py-2 font-bold ${activeTab === "Customized Plan" ? "bg-white border-b-4 border-green-500" : "text-gray-500"}`} 
+          onClick={() => setActiveTab("Customized Plan")}>
+          Customized Plan
+        </button>
       </div>
-
-      {/* Main Content */}
-      <div className="flex-1 p-4">
-        <h2 className="text-xl font-bold mb-2">{selectedProject.name}</h2>
-        <div className="bg-gray-100 p-4 rounded shadow-md mb-4">
-          <strong>Output:</strong>
-          <p className="text-gray-700">{selectedProject.output}</p>
-        </div>
-        <SyntaxHighlighter language="javascript" style={materialDark} className="rounded">
-          {selectedProject.code}
-        </SyntaxHighlighter>
+      <div className="flex-1 bg-white p-6 shadow-md mt-4 rounded">
+        {activeTab === "Standard Plan" ? (
+          <>
+            <h2 className="text-xl font-bold mb-2">{selectedProject.name}</h2>
+            <div className="bg-gray-200 p-4 rounded shadow-md mb-4">
+              <strong>Output:</strong>
+              <p className="text-gray-700">{selectedProject.output}</p>
+            </div>
+            <SyntaxHighlighter language="javascript" style={materialDark} className="rounded">
+              {selectedProject.code}
+            </SyntaxHighlighter>
+          </>
+        ) : (
+          <div className="text-gray-700 text-lg">Customized Plan content goes here...</div>
+        )}
       </div>
     </div>
   );
 }
-
-export default Toggle;
