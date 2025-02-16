@@ -4,7 +4,7 @@ import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const projects = [
   { name: "Project 1", code: "console.log('Hello World');", output: "Hello World" },
-  { name: "Project 2", code: "function add(a, b) { return a + b; }", output: "Result: 5" },
+  { name: "Project 2", code: "function add(a, b) { return a + b; }", output: "Result: 5" }
 ];
 
 export default function Toggle() {
