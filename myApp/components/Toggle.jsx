@@ -3,8 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const projects = [
-  { name: "Project 1", projectScript: "console.log('Hello World');", projectUi: <h1>This is project</h1> },
-  { name: "Project 2", projectScript: "function add(a, b) { return a + b; }", projectUi: <h1>This is project</h1> }
+  { name: "Project 1", projectScript: "console.log('Hello World');", projectOut: <h1>This is project</h1> },
+  { name: "Project 2", projectScript: "function add(a, b) { return a + b; }", projectOut: <h1>This is project</h1> }
 ];
 
 export default function Toggle() {
