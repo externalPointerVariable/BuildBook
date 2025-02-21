@@ -1,8 +1,3 @@
-function Sample(){
-    return(
-        <>
-            <h1>Sample1</h1>
-        </>
-    );
-}
-export default Sample;
+const name = "Sample1";
+const code = `console.log('Hello World');`;
+const output = "Hello World";

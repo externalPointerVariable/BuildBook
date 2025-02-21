@@ -3,8 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const projects = [
-  { name: "Project 1", code: "console.log('Hello World');", output: "Hello World" },
-  { name: "Project 2", code: "function add(a, b) { return a + b; }", output: "Result: 5" }
+  { name: "Project 1", projectScript: "console.log('Hello World');", projectUi: <h1>This is project</h1> },
+  { name: "Project 2", projectScript: "function add(a, b) { return a + b; }", projectUi: <h1>This is project</h1> }
 ];
 
 export default function Toggle() {
@@ -30,14 +30,14 @@ export default function Toggle() {
 
       <div className="bg-white p-6 shadow-md mt-4 rounded w-full transition duration-300 ease-in-out">
         <div className="bg-gray-200 p-4 rounded shadow-md mb-4">
-          <strong>Output:</strong>
-          <p className="text-gray-700">{selectedProject.output}</p>
+          <strong>{selectedProject.name}</strong>
+          {selectedProject.projectUi}
         </div>
         <div className="relative">
           <SyntaxHighlighter language="javascript" style={materialDark} className="rounded">
-            {selectedProject.code}
+            {selectedProject.projectScript}
           </SyntaxHighlighter>
-          <button onClick={() => copyToClipboard(selectedProject.code)} className="absolute top-2 right-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 ease-in-out" id="cpy-button">
+          <button onClick={() => copyToClipboard(selectedProject.projectScript)} className="absolute top-2 right-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 ease-in-out" id="cpy-button">
             Copy
           </button>
         </div>
