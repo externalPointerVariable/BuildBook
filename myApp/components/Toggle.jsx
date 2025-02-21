@@ -21,7 +21,7 @@ export default function Toggle() {
         {projects.map((project) => (
           <button
             key={project.name}
-            className={`px-6 py-2 font-bold rounded-t-2xl transition duration-300 ease-in-out ${selectedProject.name === project.name ? "bg-white shadow-black" : "text-orange-400 bg-gray-600"}`}
+            className={`px-6 py-2 font-bold rounded-t-2xl transition duration-300 ease-in-out ${selectedProject.name === project.name ? "bg-white shadow-black" : "text-orange-400 bg-gray-800"}`}
             onClick={() => setSelectedProject(project)}>
             {project.name}
           </button>
