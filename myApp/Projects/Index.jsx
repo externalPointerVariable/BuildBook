@@ -1,1 +1,1 @@
-import Sample from './Sample1.jsx';
+import passWordGenerator from "./PassWordGenerator.jsx";
