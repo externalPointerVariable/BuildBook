@@ -1,1 +1,1 @@
-import passWordGenerator from "./PassWordGenerator.jsx";
+import PassWordGenerator from "./PassWordGenerator.jsx";
