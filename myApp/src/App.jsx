@@ -3,7 +3,7 @@ import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 import Home from '../pages/Home.jsx';
 import Project from '../pages/Projects.jsx';
-import ColorChanger from '../Projects/ColorChanger.jsx';
+import PasswordGenerator from '../Projects/PassWordGenerator.jsx';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Project />
       </main>
       <Footer /> */}
-      <ColorChanger />
+      <PasswordGenerator />
     </>
   )
 }
