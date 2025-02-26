@@ -13,7 +13,7 @@ function App() {
         <Project />
       </main>
       <Footer /> */}
-      <Projects.CurrencyConverter />
+      <Projects.CurrencyConverter/>
     </>
   )
 }
