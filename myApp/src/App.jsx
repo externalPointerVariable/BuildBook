@@ -3,8 +3,7 @@ import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 import Home from '../pages/Home.jsx';
 import Project from '../pages/Projects.jsx';
-import PasswordGenerator from '../Projects/PassWordGenerator.jsx';
-
+import * as Projects from '../Projects/Index.jsx';
 function App() {
   return (
     <>
@@ -14,7 +13,7 @@ function App() {
         <Project />
       </main>
       <Footer /> */}
-      <PasswordGenerator />
+      <Projects.CurrencyConverter />
     </>
   )
 }
