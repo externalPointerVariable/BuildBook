@@ -46,7 +46,7 @@ const CurrencyConverter = () => {
             <div className="relative h-0.5">
               <button
                 type="button"
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-orange-500 text-white px-2 py-0.5"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-orange-500 hover:bg-amber-600 text-white px-2 py-0.5"
                 onClick={swap}
               >
                 swap
@@ -63,7 +63,7 @@ const CurrencyConverter = () => {
               />
             </div>
             <div className='flex justify-center'>
-                <button type="submit" className="bg-orange-500 text-white px-4 py-3 rounded-lg">
+                <button type="submit" className="bg-orange-500 hover:bg-amber-600 text-white px-4 py-3 rounded-lg">
                 Convert {fromCurrency.toUpperCase()} to {toCurrency.toUpperCase()}
                 </button>
             </div>
