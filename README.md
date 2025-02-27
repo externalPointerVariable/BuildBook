@@ -55,6 +55,5 @@ BuildBook includes the following projects:
 | **🔑 Password Generator** | A tool to generate random passwords with customizable options. |
 | **💱 Currency Converter** | A converter that allows you to convert amounts between different currencies. |
 
-More projects coming soon! 🚀✨
 
 ---
